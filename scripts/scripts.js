@@ -72,6 +72,35 @@ function renderTasks(tasks) {
  */
 var placeHolder = "";
 
+/**
+ * Opens the modal dialog with pre-filled task details.
+ * @param {Object} task - The task object to display in the modal.
+ */
+function openTaskModal(task) {
+  const modalHeader = document.getElementById("header-text");
+  const modal = document.getElementById("task-modal");
+  const titleInput = document.getElementById("task-title");
+  const descInput = document.getElementById("task-desc");
+  const statusSelect = document.getElementById("task-status");
+  const modalSave = document.getElementById("save");
+  modalSave.style.display = "initial";
+  const modalDelete = document.getElementById("delete");
+  modalDelete.disabled = false;
+  const modalCreate = document.getElementById("create");
+
+  modalHeader.innerText = "Task";
+  titleInput.value = task.title;
+  descInput.value = task.description;
+  statusSelect.value = task.status;
+  modalSave.innerHTML = "Save Changes";
+  modalDelete.innerHTML = "Delete Task";
+  modalCreate.style.display = "none";
+
+  modalDelete.type = "button";
+
+  modal.showModal();
+
+  console.log("selected div: ", task);
  * Initializes the task board and modal handlers.
  */
 export function initTaskBoard() {
