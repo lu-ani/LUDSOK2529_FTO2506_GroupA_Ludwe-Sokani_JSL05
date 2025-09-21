@@ -31,6 +31,17 @@ function createTaskElement(task) {
   });
 
   return taskDiv;
+}
+
+/**
+ * Finds the task container element based on task status.
+ * @param {string} status - The task status ('todo', 'doing', or 'done').
+ * @returns {HTMLElement|null} The container element, or null if not found.
+ */
+function getTaskContainerByStatus(status) {
+  const column = document.querySelector(`.column-div[data-status="${status}"]`);
+  return column ? column.querySelector(".tasks-container") : null;
+}
  * Initializes the task board and modal handlers.
  */
 export function initTaskBoard() {
