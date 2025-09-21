@@ -42,6 +42,15 @@ function getTaskContainerByStatus(status) {
   const column = document.querySelector(`.column-div[data-status="${status}"]`);
   return column ? column.querySelector(".tasks-container") : null;
 }
+
+/**
+ * Clears all existing task-divs from all task containers.
+ */
+function clearExistingTasks() {
+  document.querySelectorAll(".tasks-container").forEach((container) => {
+    container.innerHTML = "";
+  });
+}
  * Initializes the task board and modal handlers.
  */
 export function initTaskBoard() {
