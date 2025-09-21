@@ -166,6 +166,25 @@ function openTaskModal(task) {
     isOld = false;
   });
 }
+
+/**
+ * Add functionality to large Add Task Buttons
+ * @param {button} bigAddTask - Button that only shows on large displays
+ */
+const bigAddTask = document.getElementById("big-add-task");
+
+bigAddTask.addEventListener("click", () => {
+  openBlankModal();
+});
+
+/**
+ * Add functionality to large Add Task Buttons
+ * @param {button} smallAddTask - Button that only shows on small displays
+ */
+const smallAddTask = document.getElementById("small-add-task");
+
+smallAddTask.addEventListener("click", () => {
+  openBlankModal();
 });
  * Initializes the task board and modal handlers.
  */
