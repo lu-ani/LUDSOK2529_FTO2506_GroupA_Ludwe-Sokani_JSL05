@@ -225,6 +225,7 @@ function openBlankModal(task) {
 
   modalCreate.type = "submit";
 
+  isNew = true;
  * Initializes the task board and modal handlers.
  */
 export function initTaskBoard() {
