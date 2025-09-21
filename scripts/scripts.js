@@ -123,6 +123,33 @@ function openTaskModal(task) {
     //e.preventDefault();
     if (!isOld) return;
     console.log("Existing div submit button pressed");
+
+    let formData = new FormData(form);
+    let currentTask = Object.fromEntries(formData);
+    currentTask.id = placeHolder.id;
+
+    console.log("Current Task: ", currentTask);
+
+    console.log("Getting rid of: ", placeHolder);
+
+    let index = initialTasks.findIndex((obj) => obj.id === placeHolder.id);
+    initialTasks.splice(index, 1);
+
+    initialTasks.push(currentTask);
+
+    console.log(initialTasks);
+
+    localStorage.setItem("initialTask", JSON.stringify(initialTasks));
+    initialHolder = localStorage.getItem("initialTask");
+    console.log("saved updated modal info");
+    d.stopImmediatePropagation();
+    modal.close();
+    form.id = "task-form";
+    modalSave.type = "button";
+    initTaskBoard();
+
+    isOld = false;
+  });
 });
  * Initializes the task board and modal handlers.
  */
