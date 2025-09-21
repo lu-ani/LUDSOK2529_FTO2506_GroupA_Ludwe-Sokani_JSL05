@@ -29,6 +29,8 @@ function createTaskElement(task) {
   taskDiv.addEventListener("click", () => {
     openTaskModal(task);
   });
+
+  return taskDiv;
  * Initializes the task board and modal handlers.
  */
 export function initTaskBoard() {
