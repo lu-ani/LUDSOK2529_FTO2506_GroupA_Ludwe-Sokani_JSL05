@@ -66,6 +66,12 @@ function renderTasks(tasks) {
     }
   });
 }
+
+/**
+ * @param {variable} placeHolder - used as a placeholder for the current task during testing
+ */
+var placeHolder = "";
+
  * Initializes the task board and modal handlers.
  */
 export function initTaskBoard() {
