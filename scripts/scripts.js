@@ -217,6 +217,14 @@ function openBlankModal(task) {
   console.log("opened blank modal");
 
   modal.showModal();
+
+  task = "";
+
+  let newForm = document.querySelector("form");
+  newForm.id = "new-form";
+
+  modalCreate.type = "submit";
+
  * Initializes the task board and modal handlers.
  */
 export function initTaskBoard() {
