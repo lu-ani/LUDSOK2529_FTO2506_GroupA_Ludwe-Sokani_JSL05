@@ -9,6 +9,26 @@ if (initialHolder !== null) {
 }
 let isNew = false;
 let isOld = false;
+
+console.log(initialTasks);
+
+/**
+ * Creates a single task DOM element.
+ * @param {Object} task - Task data object.
+ * @param {string} task.title - Title of the task.
+ * @param {number} task.id - Unique task ID.
+ * @param {string} task.status - Status column: 'todo', 'doing', or 'done'.
+ * @returns {HTMLElement} The created task div element.
+ */
+function createTaskElement(task) {
+  const taskDiv = document.createElement("div");
+  taskDiv.className = "task-div";
+  taskDiv.textContent = task.title;
+  taskDiv.dataset.taskId = task.id;
+
+  taskDiv.addEventListener("click", () => {
+    openTaskModal(task);
+  });
  * Initializes the task board and modal handlers.
  */
 export function initTaskBoard() {
