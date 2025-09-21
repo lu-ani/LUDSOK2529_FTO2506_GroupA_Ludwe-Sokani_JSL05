@@ -328,6 +328,41 @@ form select {
   padding-right: 1rem;
 }
 
+/* Buttons */
+#modal-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+#save {
+  height: 40px;
+  width: 49%;
+  border-radius: 20px;
+  border-width: 0px;
+  color: var(--primary-color);
+  background-color: #635fc7;
+}
+
+#delete {
+  height: 40px;
+  width: 49%;
+  border-radius: 20px;
+  border-width: 0px;
+  color: var(--primary-color);
+  background-color: #ea5555;
+}
+
+#create {
+  height: 40px;
+  width: 100%;
+  border-radius: 20px;
+  border-width: 0px;
+  color: var(--primary-color);
+  background-color: #635fc7;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ========================
    Responsive Styles
 ======================== */
