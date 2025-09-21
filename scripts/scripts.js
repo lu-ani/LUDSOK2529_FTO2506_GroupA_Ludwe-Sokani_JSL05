@@ -229,6 +229,32 @@ function openBlankModal(task) {
   newForm.addEventListener("submit", (e) => {
     console.log("New div submit button pressed");
     if (!isNew) return;
+    //e.preventDefault();
+    const formData = new FormData(newForm);
+    const task = Object.fromEntries(formData);
+    task.id = 1;
+
+    while (initialTasks.some((initialTasks) => initialTasks.id === task.id)) {
+      if (initialTasks.some((initialTasks) => initialTasks.id === task.id)) {
+        task.id = task.id + 1;
+      }
+    }
+
+    initialTasks.push(task);
+    localStorage.setItem("initialTask", JSON.stringify(initialTasks));
+    initialHolder = localStorage.getItem("initialTask");
+    console.log("saved blank modal info");
+    e.stopImmediatePropagation();
+    modal.close();
+    newForm.id = "task-form";
+    modalSave.type = "button";
+    //console.log(modalSave.type);
+    initTaskBoard();
+    modalDelete.style.display = "initial";
+    modalDelete.innerHTML = "Delete Task";
+    isNew = false;
+  });
+}
 }
  * Initializes the task board and modal handlers.
  */
