@@ -186,6 +186,37 @@ const smallAddTask = document.getElementById("small-add-task");
 smallAddTask.addEventListener("click", () => {
   openBlankModal();
 });
+
+/**
+ * Displays empty Modal for user to input data and returns the new task.
+ * @param {Object} task - Task data object.
+ * @param {string} task.title - Title of the task.
+ * @param {number} task.id - Unique task ID.
+ * @param {string} task.status - Status column: 'todo', 'doing', or 'done'.
+ */
+function openBlankModal(task) {
+  const modal = document.getElementById("task-modal");
+  const modalHeader = document.getElementById("header-text");
+  const titleInput = document.getElementById("task-title");
+  const descInput = document.getElementById("task-desc");
+  const statusSelect = document.getElementById("task-status");
+  const modalCreate = document.getElementById("create");
+  modalCreate.style.display = "inherit";
+  const modalSave = document.getElementById("save");
+
+  const modalDelete = document.getElementById("delete");
+
+  modalHeader.innerText = "Create New Task";
+  titleInput.value = "";
+  descInput.value = "";
+  statusSelect.value = "";
+  modalCreate.innerText = "Create Task";
+  modalSave.style.display = "none";
+  modalDelete.style.display = "none";
+
+  console.log("opened blank modal");
+
+  modal.showModal();
  * Initializes the task board and modal handlers.
  */
 export function initTaskBoard() {
