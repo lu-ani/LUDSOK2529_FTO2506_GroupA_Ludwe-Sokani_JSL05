@@ -7,6 +7,8 @@ if (initialHolder !== null) {
 } else {
   var initialTasks = initialTask;
 }
+let isNew = false;
+let isOld = false;
  * Initializes the task board and modal handlers.
  */
 export function initTaskBoard() {
