@@ -114,6 +114,10 @@ function openTaskModal(task) {
   isOld = true;
 
   /**
+  form.addEventListener("submit", (d) => {
+    //e.preventDefault();
+    if (!isOld) return;
+});
  * Initializes the task board and modal handlers.
  */
 export function initTaskBoard() {
