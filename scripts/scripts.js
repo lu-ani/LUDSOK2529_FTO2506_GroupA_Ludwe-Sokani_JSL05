@@ -255,6 +255,24 @@ function openBlankModal(task) {
     isNew = false;
   });
 }
+
+/**
+ * Sets up modal close behavior.
+ */
+function setupModalCloseHandler() {
+  const modal = document.getElementById("task-modal");
+  const closeBtn = document.getElementById("close-modal-btn");
+
+  closeBtn.addEventListener("click", () => {
+    const modalSave = document.getElementById("save");
+    const modalDelete = document.getElementById("delete");
+    modalSave.innerHTML = "Save Changes";
+    modalSave.type = "button";
+    modalDelete.type = "button";
+    modalDelete.style.display = "initial";
+    modalDelete.innerHTML = "Delete Task";
+    modal.close();
+  });
 }
  * Initializes the task board and modal handlers.
  */
