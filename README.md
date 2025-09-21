@@ -1,6 +1,6 @@
 
 
-#[JSL05] Task Board with Local Storage Persistence and Task Creation 
+# [JSL05] Task Board with Local Storage Persistence and Task Creation 
 
 #Overview
 
@@ -54,9 +54,9 @@ A modern browser (Chrome, Firefox, Edge, etc.)
 
 ###Installation Steps
 
-Clone the repository:
+Download the repository:
 
-git clone https://github.com/yourusername/task-management-system.git
+[Download Repo](https://github.com/lu-ani/LUDSOK2529_FTO2506_GroupA_Ludwe-Sokani_JSL05)
 
 
 ###Navigate to the project directory:
