@@ -7,6 +7,7 @@ if (initialHolder !== null) {
 } else {
   var initialTasks = initialTask;
 }
+
 let isNew = false;
 let isOld = false;
 
@@ -101,6 +102,18 @@ function openTaskModal(task) {
   modal.showModal();
 
   console.log("selected div: ", task);
+
+  placeHolder = task;
+
+  let form = document.querySelector("form");
+
+  form.id = "existing-form";
+
+  modalSave.type = "submit";
+
+  isOld = true;
+
+  /**
  * Initializes the task board and modal handlers.
  */
 export function initTaskBoard() {
