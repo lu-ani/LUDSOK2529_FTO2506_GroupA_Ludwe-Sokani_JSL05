@@ -274,6 +274,8 @@ function setupModalCloseHandler() {
     modal.close();
   });
 }
+
+/**
  * Initializes the task board and modal handlers.
  */
 export function initTaskBoard() {
