@@ -226,6 +226,10 @@ function openBlankModal(task) {
   modalCreate.type = "submit";
 
   isNew = true;
+  newForm.addEventListener("submit", (e) => {
+    console.log("New div submit button pressed");
+    if (!isNew) return;
+}
  * Initializes the task board and modal handlers.
  */
 export function initTaskBoard() {
