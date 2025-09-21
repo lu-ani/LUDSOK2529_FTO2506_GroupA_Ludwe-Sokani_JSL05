@@ -115,6 +115,28 @@ header {
   align-items: center;
 }
 
+.add-task {
+  height: 40%;
+  width: 20%;
+  border-radius: 20px;
+  border-width: 0px;
+  justify-content: center;
+  background-color: #635fc7;
+  color: var(--primary-color);
+}
+
+.small-add-task {
+  display: none;
+  height: 60%;
+  width: 10%;
+  font-size: 20px;
+  border-radius: 20px;
+  border-width: 0px;
+  justify-content: center;
+  background-color: #635fc7;
+  color: var(--primary-color);
+}
+
 .logo-mobile {
   display: none; /* Hidden on desktop; shown on smaller screens */
 }
