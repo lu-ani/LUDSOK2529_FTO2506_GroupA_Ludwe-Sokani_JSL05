@@ -369,6 +369,13 @@ form select {
 
 /******** Tablets ********/
 @media screen and (max-width: 1023px) {
+  .small-add-task {
+    display: initial;
+  }
+
+  .add-task {
+    display: none;
+  }
   .side-bar {
     display: none; /* Hide sidebar on tablets and smaller */
   }
