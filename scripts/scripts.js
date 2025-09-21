@@ -150,6 +150,22 @@ function openTaskModal(task) {
 
     isOld = false;
   });
+
+  modalDelete.addEventListener("click", (a) => {
+    if (!isOld) return;
+    let index = initialTasks.findIndex((obj) => obj.id === placeHolder.id);
+    initialTasks.splice(index, 1);
+
+    console.log("deleted task", placeHolder);
+    localStorage.setItem("initialTask", JSON.stringify(initialTasks));
+    initialHolder = localStorage.getItem("initialTask");
+    console.log("saved updated array info", initialTasks);
+    modal.close();
+    initTaskBoard();
+    a.stopImmediatePropagation();
+    isOld = false;
+  });
+}
 });
  * Initializes the task board and modal handlers.
  */
