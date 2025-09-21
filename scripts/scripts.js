@@ -114,9 +114,15 @@ function openTaskModal(task) {
   isOld = true;
 
   /**
+   * takes updates to task and saves them as new object and deletes original object.
+   * @param {formData} form - The new form data from the entries.
+   * @param {Array<Object>} currentTask - The form data with the original task id number.
+   */
+
   form.addEventListener("submit", (d) => {
     //e.preventDefault();
     if (!isOld) return;
+    console.log("Existing div submit button pressed");
 });
  * Initializes the task board and modal handlers.
  */
